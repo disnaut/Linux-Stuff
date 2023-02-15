@@ -4,7 +4,7 @@
 sudo apt update && sudo apt upgrade -y
 
 #Install programs
-sudo apt install nodejs npm curl python2.7 git libdbusmenu-gtk4 libappindicator1 libunwind-14 libc++abi1-14 gconf-service-backend gconf2-common gconf-service libgconf-2-4 libc++1-14 libc++1 -y
+sudo apt install nodejs npm curl python2.7 git libdbusmenu-gtk4 libappindicator1 libunwind-14 libc++abi1-14 gconf-service-backend gconf2-common gconf-service libgconf-2-4 libc++1-14 libc++1 qbittorrent -y
 
 #External Debian Packages
 wget https://dl.discordapp.net/apps/linux/0.0.25/discord-0.0.25.deb -O discord.deb #Discord
