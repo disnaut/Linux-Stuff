@@ -17,13 +17,13 @@ rm *.deb
 
 #External Tar Packages
 wget https://go.dev/dl/go1.20.linux-amd64.tar.gz -O go.tar.gz #Golang
-sudo tar -C /usr/local -xzf go1.20.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go.tar.gz
 rm *.tar.gz
 
 #External AppImages
 wget https://github.com/laurent22/joplin/releases/download/v2.9.17/Joplin-2.9.17.AppImage -O Joplin.AppImage
 sudo chmod +x Joplin.AppImage
-mv Joplin.AppImage ~/Desktop/
+sudo mv Joplin.AppImage ~/Desktop/
 
 
 # Install Brave
