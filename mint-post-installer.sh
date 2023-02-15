@@ -8,8 +8,10 @@ sudo apt install nodejs npm curl python2.7 git libdbusmenu-gtk4 libappindicator1
 
 #External Debian Packages
 wget https://dl.discordapp.net/apps/linux/0.0.25/discord-0.0.25.deb -O discord.deb #Discord
-wget https://az764295.vo.msecnd.net/stable/441438abd1ac652551dbe4d408dfcec8a499b8bf/code_1.75.1-1675893397_amd64.deb -O vs_code.deb
-wget https://downloads.mongodb.com/compass/mongodb-mongosh_1.7.1_amd64.deb -O mongodb-compass.deb
+
+wget https://az764295.vo.msecnd.net/stable/441438abd1ac652551dbe4d408dfcec8a499b8bf/code_1.75.1-1675893397_amd64.deb -O vs_code.deb #VS_Code
+
+wget https://downloads.mongodb.com/compass/mongodb-mongosh_1.7.1_amd64.deb -O mongodb-compass.deb #Mongosh which isn't what I am trying to do... i think
 
 
 sudo dpkg -i *.deb
@@ -48,5 +50,11 @@ sudo apt update && sudo apt install signal-desktop -y
 curl -sS https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo apt-get update && sudo apt-get install spotify-client -y
+
+# Install VMWare Horizon
+wget https://download3.vmware.com/software/CART23FQ4_LIN64_2212.1/VMware-Horizon-Client-2212.1-8.8.1-21219348.x64.bundle -o vmware-horizon.bundle
+sudo sh ./vmware-horizon.bundle
+
+
 
 
