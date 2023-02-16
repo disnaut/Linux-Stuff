@@ -10,7 +10,9 @@ sudo apt install -y nodejs
 #Install programs
 sudo apt install python2.7 libdbusmenu-gtk4 libappindicator1 libunwind-14 libc++abi1-14 gconf-service-backend gconf2-common gconf-service libgconf-2-4 libc++1-14 libc++1 qbittorrent -y
 
-# Install Node Js 16
+sudo dpkg --add-architecture i386
+sudo apt update
+sudo apt install wget gdebi-core libgl1-mesa-glx:i386
 
 #External Debian Packages
 wget https://dl.discordapp.net/apps/linux/0.0.25/discord-0.0.25.deb -O discord.deb #Discord
@@ -18,6 +20,8 @@ wget https://dl.discordapp.net/apps/linux/0.0.25/discord-0.0.25.deb -O discord.d
 wget https://az764295.vo.msecnd.net/stable/441438abd1ac652551dbe4d408dfcec8a499b8bf/code_1.75.1-1675893397_amd64.deb -O vs_code.deb #VS_Code
 
 wget https://downloads.mongodb.com/compass/mongodb-mongosh_1.7.1_amd64.deb -O mongodb-compass.deb #Mongosh which isn't what I am trying to do... i think
+
+wget -O ~/steam.deb http://media.steampowered.com/client/installer/steam.deb
 
 sudo dpkg -i *.deb
 rm *.deb
@@ -64,4 +68,6 @@ sudo chmod u+x vmware-horizon.bundle
 sudo sh ./vmware-horizon.bundle
 
 sudo npm install --location=global @angular/cli
+
+
 
