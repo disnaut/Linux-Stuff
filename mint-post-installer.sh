@@ -2,9 +2,15 @@
 
 #Update
 sudo apt update && sudo apt upgrade -y
+sudo apt install curl
+
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt install -y nodejs
 
 #Install programs
-sudo apt install curl python2.7 git libdbusmenu-gtk4 libappindicator1 libunwind-14 libc++abi1-14 gconf-service-backend gconf2-common gconf-service libgconf-2-4 libc++1-14 libc++1 qbittorrent -y
+sudo apt install python2.7 libdbusmenu-gtk4 libappindicator1 libunwind-14 libc++abi1-14 gconf-service-backend gconf2-common gconf-service libgconf-2-4 libc++1-14 libc++1 qbittorrent -y
+
+# Install Node Js 16
 
 #External Debian Packages
 wget https://dl.discordapp.net/apps/linux/0.0.25/discord-0.0.25.deb -O discord.deb #Discord
@@ -36,11 +42,6 @@ sudo apt update
 
 sudo apt install brave-browser -y
 
-sudo apt update && sudo apt upgrade -y
-
-# Install Node Js 16
-curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-sudo apt install -y nodejs
 
 # Install Signal Desktop
 wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
@@ -62,6 +63,5 @@ wget https://download3.vmware.com/software/CART23FQ4_LIN64_2212.1/VMware-Horizon
 sudo chmod u+x vmware-horizon.bundle
 sudo sh ./vmware-horizon.bundle
 
-
-
+sudo npm install --location=global @angular/cli
 
