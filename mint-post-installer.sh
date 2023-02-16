@@ -4,7 +4,7 @@
 sudo apt update && sudo apt upgrade -y
 
 #Install programs
-sudo apt install nodejs npm curl python2.7 git libdbusmenu-gtk4 libappindicator1 libunwind-14 libc++abi1-14 gconf-service-backend gconf2-common gconf-service libgconf-2-4 libc++1-14 libc++1 qbittorrent -y
+sudo apt install curl python2.7 git libdbusmenu-gtk4 libappindicator1 libunwind-14 libc++abi1-14 gconf-service-backend gconf2-common gconf-service libgconf-2-4 libc++1-14 libc++1 qbittorrent -y
 
 #External Debian Packages
 wget https://dl.discordapp.net/apps/linux/0.0.25/discord-0.0.25.deb -O discord.deb #Discord
@@ -12,7 +12,6 @@ wget https://dl.discordapp.net/apps/linux/0.0.25/discord-0.0.25.deb -O discord.d
 wget https://az764295.vo.msecnd.net/stable/441438abd1ac652551dbe4d408dfcec8a499b8bf/code_1.75.1-1675893397_amd64.deb -O vs_code.deb #VS_Code
 
 wget https://downloads.mongodb.com/compass/mongodb-mongosh_1.7.1_amd64.deb -O mongodb-compass.deb #Mongosh which isn't what I am trying to do... i think
-
 
 sudo dpkg -i *.deb
 rm *.deb
@@ -37,6 +36,13 @@ sudo apt update
 
 sudo apt install brave-browser -y
 
+sudo apt update && sudo apt upgrade -y
+
+# Install Node Js 16
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt install -y nodejs
+
+# Install Signal Desktop
 wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
 cat signal-desktop-keyring.gpg | sudo tee -a /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null
 
@@ -53,6 +59,7 @@ sudo apt-get update && sudo apt-get install spotify-client -y
 
 # Install VMWare Horizon
 wget https://download3.vmware.com/software/CART23FQ4_LIN64_2212.1/VMware-Horizon-Client-2212.1-8.8.1-21219348.x64.bundle -o vmware-horizon.bundle
+sudo chmod u+x vmware-horizon.bundle
 sudo sh ./vmware-horizon.bundle
 
 
